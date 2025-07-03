@@ -1,26 +1,28 @@
-// Smooth scrolling for navigation links
+// Smooth scrolling for navigation links (with accessibility focus)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const targetId = this.getAttribute('href').slice(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+            target.setAttribute('tabindex', '-1');
+            target.focus({ preventScroll: true });
+        }
     });
 });
 
-// Add active class to navigation links on scroll
+// Add active class to navigation links on scroll (improved logic)
 window.addEventListener('scroll', function() {
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section, #contact, #testimonials');
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    
     let current = '';
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (window.pageYOffset >= sectionTop - 60) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= 80 && rect.bottom > 80) {
             current = section.getAttribute('id');
         }
     });
-
     navLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -29,29 +31,26 @@ window.addEventListener('scroll', function() {
     });
 });
 
-// Form submission handling
-const contactForm = document.querySelector('form');
+// Form submission handling (now works with new contact form)
+const contactForm = document.querySelector('#contact form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        // Add your form submission logic here
         alert('Thank you for your message! I will get back to you soon.');
         this.reset();
     });
 }
 
-// Add fade-in animation on scroll
+// Add fade-in animation on scroll (now includes testimonials/contact)
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('fade-in');
         }
     });
-}, {
-    threshold: 0.1
-});
+}, { threshold: 0.1 });
 
 // Observe all sections
-document.querySelectorAll('section').forEach((section) => {
+document.querySelectorAll('section, #contact, #testimonials').forEach((section) => {
     observer.observe(section);
 });

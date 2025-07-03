@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manan Panchal | AI & Full Stack Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .skill-tag, .tech-tag {
+            background-color: #0d6efd;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #212529;
+            color: white;
+            padding-top: 2rem;
+        }
+        .social-links a {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: white;
+        }
+        .social-links a:hover {
+            color: #0d6efd;
+        }
+        .progress-bar {
+            background-color: #0d6efd;
+        }
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 4rem 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Manan Panchal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <div>
+            <h1 class="display-4">Manan Panchal</h1>
+            <p class="lead">AI & Full Stack Developer</p>
+            <p>Barrie, Ontario, Canada | Georgian College Graduate</p>
+        </div>
+    </section>
+
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Me</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <p class="lead">I am an AI enthusiast and full-stack developer focused on building scalable applications integrating GenAI, voice tech, and clean architecture.</p>
+                    <h5>Core Technical Skills</h5>
+                    <div class="skills-grid">
+                        <div class="skill-tag">Java</div>
+                        <div class="skill-tag">Spring Boot</div>
+                        <div class="skill-tag">AI/GenAI</div>
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">FastAPI</div>
+                        <div class="skill-tag">Cloud</div>
+                    </div>
+                    <h5 class="mt-4">Focus Areas</h5>
+                    <ul>
+                        <li>LangGraph Voice AI Assistant</li>
+                        <li>Real-time Voice UI</li>
+                        <li>GenAI Agent Workflows</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <span>Java</span>
+                        <div class="progress"><div class="progress-bar" style="width: 95%"></div></div>
+                    </div>
+                    <div class="mb-3">
+                        <span>Spring Boot</span>
+                        <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+                    </div>
+                    <div class="mb-3">
+                        <span>AI/GenAI</span>
+                        <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
+                    </div>
+                    <div class="mb-3">
+                        <span>Python</span>
+                        <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Projects</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x300/007bff/ffffff?text=LangGraph+AI" class="card-img-top" alt="LangGraph Voice AI" />
+                        <div class="card-body">
+                            <h5 class="card-title">LangGraph Voice AI Assistant</h5>
+                            <p>Advanced voice assistant using LangGraph + Twilio for AI-powered calling.</p>
+                            <div><span class="tech-tag">LangGraph</span> <span class="tech-tag">Twilio</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x300/6c757d/ffffff?text=FastAPI+App" class="card-img-top" alt="FastAPI Voice App" />
+                        <div class="card-body">
+                            <h5 class="card-title">Real-time Voice Web App</h5>
+                            <p>FastAPI-based web app for real-time voice interactions and code Q&A UI.</p>
+                            <div><span class="tech-tag">FastAPI</span> <span class="tech-tag">Voice UI</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://via.placeholder.com/400x300/28a745/ffffff?text=AI+Workflows" class="card-img-top" alt="AI Workflows" />
+                        <div class="card-body">
+                            <h5 class="card-title">AI Workflow Integration</h5>
+                            <p>Scalable AI workflows with modular design using GenAI infrastructure.</p>
+                            <div><span class="tech-tag">AI/GenAI</span> <span class="tech-tag">Clean Arch</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-envelope me-2"></i>your.email@example.com</p>
+                    <p><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Social</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <a href="#home" class="d-block text-light">Home</a>
+                    <a href="#about" class="d-block text-light">About</a>
+                    <a href="#projects" class="d-block text-light">Projects</a>
+                </div>
+            </div>
+            <hr />
+            <p class="text-center">&copy; 2025 Manan Panchal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

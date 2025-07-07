@@ -1,260 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manan Panchal | AI & Full Stack Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <meta name="description" content="Portfolio of Manan Panchal, AI & Full Stack Developer in Barrie, Ontario, Canada. Projects, skills, and contact information." />
-    <meta property="og:title" content="Manan Panchal | AI & Full Stack Developer" />
-    <meta property="og:description" content="Portfolio of Manan Panchal, AI & Full Stack Developer. Explore projects, skills, and contact info." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://your-portfolio-url.com" />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1551782450-a2132b4ba21d" />
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            line-height: 1.6;
-        }
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2rem;
-        }
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        .skill-tag, .tech-tag {
-            background-color: #0d6efd;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-        }
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-        }
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-        }
-        footer {
-            background-color: #212529;
-            color: white;
-            padding-top: 2rem;
-        }
-        .social-links a {
-            font-size: 1.5rem;
-            margin-right: 1rem;
-            color: white;
-        }
-        .social-links a:hover {
-            color: #0d6efd;
-        }
-        .progress-bar {
-            background-color: #0d6efd;
-        }
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 4rem 1rem;
-                text-align: center;
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manan Panchal - Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Manan Panchal</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                </ul>
-            </div>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">MP</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <section id="home" class="hero-section">
-        <div>
-            <h1 class="display-4">Manan Panchal</h1>
-            <p class="lead">AI & Full Stack Developer</p>
-            <p>Barrie, Ontario, Canada | Georgian College Graduate</p>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Manan Panchal</h1>
+            <h2>Full Stack Developer | AI & Cloud Enthusiast</h2>
+            <div class="social-links">
+                <a href="https://github.com/MananPanchal007" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/manan-panchal-007" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">View Projects</a>
+            </div>
         </div>
     </section>
 
-    <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">About Me</h2>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <p class="lead">I am an AI enthusiast and full-stack developer focused on building scalable applications integrating GenAI, voice tech, and clean architecture.</p>
-                    <h5>Core Technical Skills</h5>
-                    <div class="skills-grid">
-                        <div class="skill-tag">Java</div>
-                        <div class="skill-tag">Spring Boot</div>
-                        <div class="skill-tag">AI/GenAI</div>
-                        <div class="skill-tag">Python</div>
-                        <div class="skill-tag">FastAPI</div>
-                        <div class="skill-tag">Cloud</div>
-                    </div>
-                    <h5 class="mt-4">Focus Areas</h5>
-                    <ul>
-                        <li>LangGraph Voice AI Assistant</li>
-                        <li>Real-time Voice UI</li>
-                        <li>GenAI Agent Workflows</li>
-                    </ul>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p class="intro">Hi, I'm Manan Panchal, a passionate and results-driven Full Stack Developer based in Barrie, Ontario, Canada. I recently graduated with a Diploma in Computer Programming from Georgian College, and I've been actively building solutions at the intersection of software engineering, AI, and cloud computing.</p>
+
+                <p>With a strong foundation in Java, Spring Boot, and Python, I specialize in creating scalable backend systems, AI-powered applications, and intelligent automation tools. My technical interests also extend into quantum computing, where I explore the future of computation from both a theoretical and hardware perspective.</p>
+
+                <p>Over the past year, I've worked on several impactful projects using FastAPI, LangChain, LangGraph, and tools like Hugging Face, QdrantDB, and Twilio. I love transforming complex ideas into intuitive user experiences, whether through modern web interfaces or voice-based AI systems.</p>
+
+                <p>Currently, I'm focused on building AI assistants that interact with users via voice or chat, developing full-stack apps with Streamlit, React, and FastAPI, and exploring AI agent workflows, RAG pipelines, and cloud deployments.</p>
+
+                <p>When I'm not coding, I enjoy reading about physics, experimenting with new frameworks, or contributing to open-source AI tools. I'm always open to collaborations, freelance projects, or innovative startups that aim to push boundaries with technology.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skills-category">
+                <h3 class="category-title">Languages</h3>
+                <div class="skills-tags">
+                    <span class="java">Java</span>
+                    <span class="python">Python</span>
+                    <span class="javascript">JavaScript</span>
+                    <span class="typescript">TypeScript</span>
+                    <span class="react">React</span>
                 </div>
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <span>Java</span>
-                        <div class="progress"><div class="progress-bar" style="width: 95%"></div></div>
+            </div>
+            <div class="skills-category">
+                <h3 class="category-title">Frameworks</h3>
+                <div class="skills-tags">
+                    <span class="spring">Spring Boot</span>
+                    <span class="spring">Spring Security</span>
+                    <span class="spring">Spring Data JPA</span>
+                    <span class="spring">Spring Cloud</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3 class="category-title">AI/ML Tools</h3>
+                <div class="skills-tags">
+                    <span class="openai">OpenAI</span>
+                    <span class="langchain">LangChain</span>
+                    <span class="langchain">LangGraph</span>
+                    <span class="huggingface">Hugging Face</span>
+                    <span class="prompt">Prompt Engineering</span>
+                    <span class="llm">LLM Fine-tuning</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3 class="category-title">Cloud Services</h3>
+                <div class="skills-tags">
+                    <span class="aws">AWS EC2</span>
+                    <span class="aws">AWS Lambda</span>
+                    <span class="aws">AWS S3</span>
+                    <span class="aws">AWS RDS</span>
+                    <span class="aws">AWS DynamoDB</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3 class="category-title">Databases</h3>
+                <div class="skills-tags">
+                    <span class="postgresql">PostgreSQL</span>
+                    <span class="neo4j">Neo4j</span>
+                    <span class="pinecone">Pinecone</span>
+                    <span class="qdrant">QdrantDB</span>
+                    <span class="aws">Amazon RDS</span>
+                    <span class="aws">Amazon DynamoDB</span>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h3 class="category-title">Frontend</h3>
+                <div class="skills-tags">
+                    <span class="html">HTML</span>
+                    <span class="css">CSS</span>
+                    <span class="javascript">JS</span>
+                    <span class="react">React</span>
+                    <span class="nextjs">Next.js</span>
+                    <span class="streamlit">Streamlit</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>AI-Powered Chatbot Platform</h3>
+                    <p>Enterprise-grade chatbot system with multi-model support and custom prompt engineering</p>
+                    <div class="project-tech">
+                        <span>LangChain</span>
+                        <span>OpenAI</span>
+                        <span>React</span>
+                        <span>Node.js</span>
                     </div>
-                    <div class="mb-3">
-                        <span>Spring Boot</span>
-                        <div class="progress"><div class="progress-bar" style="width: 90%"></div></div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Cloud-Native AI Dashboard</h3>
+                    <p>Scalable dashboard for managing AI models and workflows in AWS</p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>Next.js</span>
+                        <span>AWS EC2</span>
+                        <span>DynamoDB</span>
                     </div>
-                    <div class="mb-3">
-                        <span>AI/GenAI</span>
-                        <div class="progress"><div class="progress-bar" style="width: 85%"></div></div>
-                    </div>
-                    <div class="mb-3">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Smart Document Processing System</h3>
+                    <p>Automated document processing with AI-powered data extraction and classification</p>
+                    <div class="project-tech">
+                        <span>LangChain</span>
                         <span>Python</span>
-                        <div class="progress"><div class="progress-bar" style="width: 80%"></div></div>
+                        <span>Spring Boot</span>
+                        <span>PostgreSQL</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Projects</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/400x300/007bff/ffffff?text=LangGraph+AI" class="card-img-top" alt="LangGraph Voice AI" />
-                        <div class="card-body">
-                            <h5 class="card-title">LangGraph Voice AI Assistant</h5>
-                            <p>Advanced voice assistant using LangGraph + Twilio for AI-powered calling.</p>
-                            <div><span class="tech-tag">LangGraph</span> <span class="tech-tag">Twilio</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/400x300/6c757d/ffffff?text=FastAPI+App" class="card-img-top" alt="FastAPI Voice App" />
-                        <div class="card-body">
-                            <h5 class="card-title">Real-time Voice Web App</h5>
-                            <p>FastAPI-based web app for real-time voice interactions and code Q&A UI.</p>
-                            <div><span class="tech-tag">FastAPI</span> <span class="tech-tag">Voice UI</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <img src="https://via.placeholder.com/400x300/28a745/ffffff?text=AI+Workflows" class="card-img-top" alt="AI Workflows" />
-                        <div class="card-body">
-                            <h5 class="card-title">AI Workflow Integration</h5>
-                            <p>Scalable AI workflows with modular design using GenAI infrastructure.</p>
-                            <div><span class="tech-tag">AI/GenAI</span> <span class="tech-tag">Clean Arch</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
-    <section id="testimonials" class="py-5 bg-white">
-        <div class="container">
-            <h2 class="text-center mb-4">Testimonials</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <blockquote class="blockquote text-center">
-                        <p class="mb-0">Manan is a highly skilled developer with a passion for AI and clean code. He delivered our project on time and exceeded expectations!</p>
-                        <footer class="blockquote-footer">Client, Tech Startup</footer>
-                    </blockquote>
-                </div>
-            </div>
+    <footer class="footer">
+        <div class="social-links">
+            <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
         </div>
-    </section>
-
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Contact Me</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                        <a href="resume.pdf" class="btn btn-outline-secondary ms-2" download>Download Resume</a>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="text-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Contact</h5>
-                    <p><i class="fas fa-envelope me-2"></i>your.email@example.com</p>
-                    <p><i class="fas fa-phone me-2"></i>+1 (555) 123-4567</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Social</h5>
-                    <div class="social-links">
-                        <a href="https://github.com/yourusername" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://twitter.com/yourusername" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <h5>Quick Links</h5>
-                    <a href="#home" class="d-block text-light">Home</a>
-                    <a href="#about" class="d-block text-light">About</a>
-                    <a href="#projects" class="d-block text-light">Projects</a>
-                    <a href="#contact" class="d-block text-light">Contact</a>
-                </div>
-            </div>
-            <hr />
-            <p class="text-center">&copy; 2025 Manan Panchal. All rights reserved.</p>
-        </div>
+        <p>&copy; 2025 Manan Panchal. All rights reserved.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
